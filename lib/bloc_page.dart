@@ -26,10 +26,14 @@ class _BlocPageState extends State<BlocPage> {
         child: BlocBuilder<BookBloc, BookState>(
           builder: (context, state) {
             if (state is BookStateInitial) {
-              return const Center(child: CircularProgressIndicator());
+              return const Center(
+                child: Text('Empty Books!'),
+              );
             }
             if (state is BookStateLoading) {
-              return const Center(child: CircularProgressIndicator());
+              return const  Center(
+                child: Text('Empty Books!'),
+              );
             }
 
             if (state is BookStateLoaded) {
